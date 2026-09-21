@@ -1,0 +1,165 @@
+# ==============================================================================
+# DATENBANKEN & ECHTE DATEN (Persönliche Daten, Speicherstände & Dumps)
+# ==============================================================================
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sql
+*.dump
+data/
+**/data/
+chroma_db/
+**/chroma_db/
+neo4j/
+**/neo4j/
+storage/
+**/storage/
+uploads/
+**/uploads/
+media/
+**/media/
+backups/
+**/backups/
+
+# ==============================================================================
+# SENSIBLE EINSTELLUNGEN, API-KEYS & ZUGANGSDATEN
+# ==============================================================================
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+config.json
+secrets.json
+credentials.json
+
+# Spezifische lokale Skripte mit Zugangsdaten / API-Keys
+waha_startup.sh
+
+# Zertifikate, Schlüssel & Mobile Keystores
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.keystore
+*.mobileprovision
+
+# ==============================================================================
+# BACKUPS, ARCHIVE & CODE-DUMPS (Große Dateien)
+# ==============================================================================
+*.tar
+*.gz
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+*.bak
+*.backup
+eve_backup_*
+repomix-output.*
+repomix-output.xml
+
+# ==============================================================================
+# LOGS & TEMPORÄRE DATEIEN
+# ==============================================================================
+*.log
+logs/
+**/logs/
+nohup.out
+ui.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==============================================================================
+# PYTHON & VIRTUELLE UMGEBUNGEN (eve_server)
+# ==============================================================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# ==============================================================================
+# NODE.JS, REACT / VITE & EXPO (eve-dashboard & eve-mobile)
+# ==============================================================================
+node_modules/
+**/node_modules/
+dist/
+dist-ssr/
+web-build/
+.expo/
+expo-env.d.ts
+.metro-health-check*
+*.tsbuildinfo
+.vite/
+.vite-temp/
+
+# Native Mobile Build-Ordner (Expo / React Native)
+ios/
+android/
+.kotlin/
+
+# ==============================================================================
+# SYSTEM-, IDE- & ASSISTENTEN-DATEIEN
+# ==============================================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.claude/
+*.sw?
+*.swo
+*.swp
+*~
+
+# ==============================================================================
+# MEDIENDATEIEN (Fotos, Videos, Audio)
+# ==============================================================================
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+*.flv
+*.wmv
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.m4a
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.heic
+*.raw
+
+# Ausnahmen für essentielle Frontend- & App-Assets (Icons, Logos, UI-Grafiken):
+!eve-dashboard/src/assets/**
+!eve-dashboard/public/**
+!eve-mobile/assets/**
+!**/public/favicon.*
+!**/public/icons.*
+

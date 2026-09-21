@@ -1,0 +1,68 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed; /* Verhindert das lästige iOS Safari Bounce-Scrollen */
+  touch-action: none;
+}
+
+@import "tailwindcss";
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Seifenblasen-Verlauf & Glanz */
+.bubble-sphere {
+  background: radial-gradient(
+    circle at 30% 35%,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.2) 18%,
+    rgba(6, 182, 212, 0.35) 35%,     /* Cyan Reflektion */
+    rgba(236, 72, 153, 0.4) 55%,     /* Pink/Magenta Reflektion */
+    rgba(168, 85, 247, 0.35) 75%,    /* Violett Reflektion */
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  box-shadow: 
+    inset 0 0 20px rgba(255, 255, 255, 0.8),
+    inset 10px -10px 25px rgba(236, 72, 153, 0.5),
+    inset -10px 10px 25px rgba(6, 182, 212, 0.5),
+    0 0 35px rgba(6, 182, 212, 0.3),
+    0 0 60px rgba(236, 72, 153, 0.2);
+  backdrop-filter: blur(4px);
+  animation: bubbleWobble 8s ease-in-out infinite alternate, bubbleFloat 4s ease-in-out infinite alternate;
+}
+
+/* Organisches Verformen der Seifenblase */
+@keyframes bubbleWobble {
+  0% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  25% {
+    border-radius: 58% 42% 63% 37% / 41% 65% 35% 59%;
+  }
+  50% {
+    border-radius: 43% 57% 38% 62% / 60% 38% 62% 40%;
+  }
+  75% {
+    border-radius: 65% 35% 52% 48% / 36% 58% 42% 64%;
+  }
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+}
+
+/* Sanftes Schweben */
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}

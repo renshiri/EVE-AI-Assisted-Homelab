@@ -1,0 +1,21 @@
+eve_server/
+├── routes/
+│   ├── __init__.py
+│   ├── auth.py
+│   ├── calendar.py
+│   ├── chat.py
+│   ├── intent.py
+│   ├── media.py
+│   ├── pihole.py
+│   ├── search.py
+│   ├── system.py
+│   ├── terminal.py
+│   ├── todos.py
+│   └── weather.py
+├── eve_config.py
+├── eve_graph.py
+├── eve_media.py
+├── eve_memory.py
+├── eve_research.py
+├── eve_server.py
+└── eve_weather.py
